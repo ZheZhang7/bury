@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="./dist/index.js"></script>
+    <!-- 通过是否有target-key属性来决定是否上报数据 -->
+    <button target-key="btn">上报按钮</button>
+    <button>无添加</button>
+    <script>
+      new bury({
+        requestUrl: "http://localhost:9000/bury",
+        historyTrack: true,
+        domTrack: true,
+        jsError: true,
+      });
+    </script>
+  </body>
+</html>
